@@ -17,6 +17,14 @@ const themestyle = {
       xlarge: "32px",
       sm:"20px"
     },
+    button: {
+      color: "#181D8C",
+      padding: "5px",
+      width: "350px",
+      height: "42px",
+      borderRadius: "5px",
+      border: "1px solid transparent",
+    },
     spacing: {
       small: "10px",
       medium: "20px",
