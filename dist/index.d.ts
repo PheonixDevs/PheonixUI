@@ -10,7 +10,11 @@ interface PheonixSnackBarProps {
     message?: string;
     customAction?: React$1.ReactNode;
     severity?: 'success' | 'error';
-    snackbarsize?: string;
+    backgroundColor?: string;
+    color?: string;
+    width?: string;
+    height?: string;
+    timeout?: number;
 }
 declare const PheonixSnackBar: React$1.FC<PheonixSnackBarProps>;
 
