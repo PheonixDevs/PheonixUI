@@ -10,4 +10,21 @@ interface PheonixButtonProps extends ButtonProps {
 }
 declare const PheonixButton: React.FC<PheonixButtonProps>;
 
-export { PheonixButton };
+interface PheonixSnackBarProps {
+    vertical: "top" | "bottom";
+    horizontal: "left" | "center" | "right";
+    open: boolean;
+    onClose?: () => void;
+    message?: string;
+    customAction?: React.ReactNode;
+    severity?: "success" | "error";
+    backgroundColor?: string;
+    color?: string;
+    width?: string;
+    height?: string;
+    timeout?: number;
+    sx?: SxProps<Theme>;
+}
+declare const PheonixSnackBar: React.FC<PheonixSnackBarProps>;
+
+export { PheonixButton, PheonixSnackBar as PheonixSnackbar };
