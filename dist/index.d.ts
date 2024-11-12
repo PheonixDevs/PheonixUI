@@ -1,4 +1,4 @@
-import React$1, { ChangeEvent, FocusEvent, ReactNode, KeyboardEvent } from 'react';
+import React$1, { ChangeEvent, FocusEvent, ReactNode, KeyboardEvent, CSSProperties } from 'react';
 import { ButtonProps } from '@mui/material/Button';
 import { SxProps, Theme as Theme$1 } from '@mui/material/styles';
 import { Theme } from '@mui/material';
@@ -62,4 +62,26 @@ interface PheonixBoxProps {
 }
 declare const PheonixBox: React$1.FC<PheonixBoxProps>;
 
-export { PheonixBox, PheonixButton, PheonixSnackBar as PheonixSnackbar, PheonixTextField as PheonixTextfield };
+interface PheonixPaperProps {
+    children: ReactNode;
+    elevation?: number;
+    padding?: number | string;
+    height?: number | string;
+    width?: number | string;
+    marginLeft?: number | string;
+    marginRight?: number | string;
+    marginTop?: number | string;
+    marginBottom?: number | string;
+    borderRadius?: number | string;
+    display?: CSSProperties['display'];
+    alignItems?: CSSProperties['alignItems'];
+    justifyContent?: CSSProperties['justifyContent'];
+    flexDirection?: CSSProperties['flexDirection'];
+    gap?: number | string;
+    color?: string;
+    backgroundColor?: string;
+    style?: CSSProperties;
+}
+declare const PheonixPaper: React$1.FC<PheonixPaperProps>;
+
+export { PheonixBox, PheonixButton, PheonixPaper, PheonixSnackBar as PheonixSnackbar, PheonixTextField as PheonixTextfield };
