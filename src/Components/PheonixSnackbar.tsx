@@ -19,7 +19,6 @@ interface PheonixSnackBarProps {
   color?: string;
   width?: string;
   height?: string;
-  timeout?: number;
   sx?: SxProps<Theme>;
 }
 
@@ -35,7 +34,6 @@ const PheonixSnackBar: React.FC<PheonixSnackBarProps> = ({
   color,
   width = "auto",
   height = "auto",
-  timeout = 3000,
   sx,
 }) => {
   const anchorOrigin: SnackbarOrigin = { vertical, horizontal };
@@ -47,16 +45,14 @@ const PheonixSnackBar: React.FC<PheonixSnackBarProps> = ({
   const defaultColor =
     severity === "success" ? themestyle.colors.white : themestyle.colors.error;
 
-  useEffect(() => {
-    setSnackbarOpen(open);
-    if (open) {
-      const timer = setTimeout(() => {
-        setSnackbarOpen(false);
-        onClose && onClose();
-      }, timeout);
-      return () => clearTimeout(timer);
-    }
-  }, [open, timeout, onClose]);
+    useEffect(() => {
+      if (open) {
+        setTimeout(() => {
+          setSnackbarOpen(false);
+          onClose && onClose();
+        }, 100000);
+      }
+    }, [open, onClose]);  
 
   return (
     <Snackbar
