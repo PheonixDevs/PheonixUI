@@ -28,6 +28,7 @@ const PheonixButton: React.FC<PheonixButtonProps> = ({
         height: themestyle.button.height,
         borderRadius: themestyle.button.borderRadius,
         border: themestyle.button.border,
+        textTransform:"none",
         ...sx,
       }}
       {...props}

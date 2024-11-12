@@ -1,6 +1,6 @@
 import React$1, { ChangeEvent, FocusEvent, ReactNode, KeyboardEvent } from 'react';
 import { ButtonProps } from '@mui/material/Button';
-import { SxProps } from '@mui/material/styles';
+import { SxProps, Theme as Theme$1 } from '@mui/material/styles';
 import { Theme } from '@mui/material';
 import { SxProps as SxProps$1 } from '@mui/system';
 
@@ -23,7 +23,6 @@ interface PheonixSnackBarProps {
     color?: string;
     width?: string;
     height?: string;
-    timeout?: number;
     sx?: SxProps<Theme>;
 }
 declare const PheonixSnackBar: React$1.FC<PheonixSnackBarProps>;
@@ -55,4 +54,12 @@ interface PheonixTextFieldProps {
 }
 declare const PheonixTextField: React.FC<PheonixTextFieldProps>;
 
-export { PheonixButton, PheonixSnackBar as PheonixSnackbar, PheonixTextField as PheonixTextfield };
+interface PheonixBoxProps {
+    children?: React$1.ReactNode;
+    component?: React$1.ElementType;
+    style?: React$1.CSSProperties;
+    sx?: SxProps<Theme$1>;
+}
+declare const PheonixBox: React$1.FC<PheonixBoxProps>;
+
+export { PheonixBox, PheonixButton, PheonixSnackBar as PheonixSnackbar, PheonixTextField as PheonixTextfield };
