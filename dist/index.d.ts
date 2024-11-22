@@ -1,7 +1,7 @@
 import React$1, { ChangeEvent, FocusEvent, ReactNode, KeyboardEvent, CSSProperties } from 'react';
 import { ButtonProps } from '@mui/material/Button';
 import { SxProps, Theme as Theme$1 } from '@mui/material/styles';
-import { Theme } from '@mui/material';
+import { Theme, TextFieldProps } from '@mui/material';
 import { SxProps as SxProps$1 } from '@mui/system';
 import * as react_jsx_runtime from 'react/jsx-runtime';
 import { AutocompleteProps, AutocompleteRenderInputParams } from '@mui/material/Autocomplete';
@@ -121,4 +121,23 @@ interface DialogModalProps {
 }
 declare const PheonixDialog: React$1.FC<DialogModalProps>;
 
-export { PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixButton, PheonixDialog, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixTextField as PheonixTextfield };
+interface PhoenixTextareaProps extends Omit<TextFieldProps, 'multiline'> {
+    id?: string;
+    value?: string;
+    name?: string;
+    placeholder?: string;
+    label?: string;
+    variant?: "standard" | "outlined" | "filled";
+    onChange?: (event: ChangeEvent<HTMLTextAreaElement>) => void;
+    onFocus?: (event: FocusEvent<HTMLTextAreaElement>) => void;
+    onBlur?: (event: FocusEvent<HTMLTextAreaElement>) => void;
+    required?: boolean;
+    error?: boolean;
+    helperText?: string;
+    disabled?: boolean;
+    rows?: number;
+    className?: string;
+}
+declare const PhoenixTextarea: React.FC<PhoenixTextareaProps>;
+
+export { PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixButton, PheonixDialog, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
