@@ -3,6 +3,8 @@ import { ButtonProps } from '@mui/material/Button';
 import { SxProps, Theme as Theme$1 } from '@mui/material/styles';
 import { Theme } from '@mui/material';
 import { SxProps as SxProps$1 } from '@mui/system';
+import * as react_jsx_runtime from 'react/jsx-runtime';
+import { AutocompleteProps, AutocompleteRenderInputParams } from '@mui/material/Autocomplete';
 
 interface PheonixButtonProps extends ButtonProps {
     label?: string;
@@ -84,4 +86,19 @@ interface PheonixPaperProps {
 }
 declare const PheonixPaper: React$1.FC<PheonixPaperProps>;
 
-export { PheonixBox, PheonixButton, PheonixPaper, PheonixSnackBar as PheonixSnackbar, PheonixTextField as PheonixTextfield };
+interface PhoenixAutocompleteProps<T, Multiple extends boolean | undefined = false, DisableClearable extends boolean | undefined = false, FreeSolo extends boolean | undefined = false> extends Omit<AutocompleteProps<T, Multiple, DisableClearable, FreeSolo>, 'renderInput'> {
+    name?: string;
+    placeholder?: string;
+    label?: string;
+    variant?: "standard" | "outlined" | "filled";
+    endAdornment?: ReactNode;
+    style?: CSSProperties;
+    className?: string;
+    error?: boolean;
+    helperText?: string;
+    disableClearable?: DisableClearable;
+    renderInput?: (params: AutocompleteRenderInputParams) => ReactNode;
+}
+declare const PhoenixAutocomplete: <T extends unknown, Multiple extends boolean | undefined = false, DisableClearable extends boolean | undefined = false, FreeSolo extends boolean | undefined = false>({ id, options, value, placeholder, label, variant, disabled, onChange, onInputChange, name, endAdornment, style, loading, getOptionLabel, renderOption, renderInput, size, sx, multiple, freeSolo, disableClearable, ...props }: PhoenixAutocompleteProps<T, Multiple, DisableClearable, FreeSolo>) => react_jsx_runtime.JSX.Element;
+
+export { PheonixBox, PheonixButton, PheonixPaper, PheonixSnackBar as PheonixSnackbar, PheonixTextField as PheonixTextfield, PhoenixAutocomplete };
