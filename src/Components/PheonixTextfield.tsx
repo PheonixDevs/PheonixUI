@@ -55,6 +55,7 @@ const PheonixTextField: React.FC<PheonixTextFieldProps> = ({
   className,
   error,
   helperText,
+ ...props
 }) => {
   return (
     <TextField
@@ -79,8 +80,8 @@ const PheonixTextField: React.FC<PheonixTextFieldProps> = ({
       disabled={disabled}
       multiline={multiline}
       rows={rows}
-      required={required}
-
+      required={required} 
+      {...props}
     />
   );
 };
