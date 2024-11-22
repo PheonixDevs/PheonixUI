@@ -5,3 +5,4 @@ export { default as PheonixBox } from './Components/PheonixBox';
 export {default as PheonixPaper} from './Components/PheonixPaper';
 export {default as PheonixAutocomplete} from './Components/PheonixAutocomplete';
 export {default as PheonixSkeleton} from './Components/PheonixSkeleton';
+export {default as PheonixDialog} from './Components/PheonixDialog';

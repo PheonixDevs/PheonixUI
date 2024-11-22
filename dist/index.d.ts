@@ -107,4 +107,18 @@ interface PheonixSkeletonProps extends SkeletonProps {
 }
 declare const PheonixSkeleton: React$1.FC<PheonixSkeletonProps>;
 
-export { PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixButton, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixTextField as PheonixTextfield };
+interface DialogModalProps {
+    open: boolean;
+    onClose: () => void;
+    onConfirm: () => void;
+    entity?: string;
+    entityname?: string;
+    textTitle?: string;
+    subText?: string;
+    text?: string;
+    height?: string;
+    width?: string;
+}
+declare const PheonixDialog: React$1.FC<DialogModalProps>;
+
+export { PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixButton, PheonixDialog, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixTextField as PheonixTextfield };
