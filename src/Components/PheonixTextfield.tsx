@@ -80,7 +80,7 @@ const PheonixTextField: React.FC<PheonixTextFieldProps> = ({
       disabled={disabled}
       multiline={multiline}
       rows={rows}
-      required={required}
+      required={required} 
       {...props}
     />
   );
