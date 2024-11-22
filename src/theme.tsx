@@ -37,6 +37,11 @@ const themestyle = {
     md: 900,
     medium: 500,
   },
+  skeleton: {
+    backgroundColor: "#e0e0e0",
+    borderRadius: "4px",
+    margin: "8px 0",
+  },
 };
 export default themestyle;
     

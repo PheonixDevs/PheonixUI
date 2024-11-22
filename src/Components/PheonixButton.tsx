@@ -1,10 +1,10 @@
 import React from "react";
-import MuiButton, { ButtonProps as MuiButtonProps } from "@mui/material/Button";
+import Button, { ButtonProps } from "@mui/material/Button";
 import { SxProps } from "@mui/material/styles";
 import { Theme } from "@mui/material";
 import themestyle from "../theme";
 
-interface PheonixButtonProps extends MuiButtonProps {
+interface PheonixButtonProps extends ButtonProps {
   label?: string;
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
   sx?: SxProps<Theme>;
@@ -17,7 +17,7 @@ const PheonixButton: React.FC<PheonixButtonProps> = ({
   ...props
 }) => {
   return (
-    <MuiButton
+    <Button
       onClick={onClick}
       variant={props.variant || "outlined"}
       sx={{
@@ -34,7 +34,7 @@ const PheonixButton: React.FC<PheonixButtonProps> = ({
       {...props}
     >
       {label}
-    </MuiButton>
+    </Button>
   );
 };
 

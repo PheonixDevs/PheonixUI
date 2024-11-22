@@ -5,6 +5,7 @@ import { Theme } from '@mui/material';
 import { SxProps as SxProps$1 } from '@mui/system';
 import * as react_jsx_runtime from 'react/jsx-runtime';
 import { AutocompleteProps, AutocompleteRenderInputParams } from '@mui/material/Autocomplete';
+import { SkeletonProps } from '@mui/material/Skeleton';
 
 interface PheonixButtonProps extends ButtonProps {
     label?: string;
@@ -101,4 +102,9 @@ interface PhoenixAutocompleteProps<T, Multiple extends boolean | undefined = fal
 }
 declare const PhoenixAutocomplete: <T extends unknown, Multiple extends boolean | undefined = false, DisableClearable extends boolean | undefined = false, FreeSolo extends boolean | undefined = false>({ id, options, value, placeholder, label, variant, disabled, onChange, onInputChange, name, endAdornment, style, loading, getOptionLabel, renderOption, renderInput, size, sx, multiple, freeSolo, disableClearable, ...props }: PhoenixAutocompleteProps<T, Multiple, DisableClearable, FreeSolo>) => react_jsx_runtime.JSX.Element;
 
-export { PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixButton, PheonixPaper, PheonixSnackBar as PheonixSnackbar, PheonixTextField as PheonixTextfield };
+interface PheonixSkeletonProps extends SkeletonProps {
+    sx?: SxProps<Theme>;
+}
+declare const PheonixSkeleton: React$1.FC<PheonixSkeletonProps>;
+
+export { PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixButton, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixTextField as PheonixTextfield };

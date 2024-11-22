@@ -4,3 +4,4 @@ export { default as PheonixTextfield } from './Components/PheonixTextfield';
 export { default as PheonixBox } from './Components/PheonixBox';
 export {default as PheonixPaper} from './Components/PheonixPaper';
 export {default as PheonixAutocomplete} from './Components/PheonixAutocomplete';
+export {default as PheonixSkeleton} from './Components/PheonixSkeleton';
