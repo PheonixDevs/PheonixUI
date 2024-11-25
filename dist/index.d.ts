@@ -152,4 +152,15 @@ interface PheonixFooterProps {
 }
 declare const PheonixFooter: React$1.FC<PheonixFooterProps>;
 
-export { PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixButton, PheonixDialog, PheonixFooter, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
+interface BreadcrumbItem {
+    text: string;
+    to?: string;
+}
+interface PheonixBreadcrumbsProps {
+    breadcrumbs: BreadcrumbItem[];
+    textStyle?: object;
+    linkStyle?: object;
+}
+declare const PheonixBreadcrumbs: React$1.FC<PheonixBreadcrumbsProps>;
+
+export { PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixDialog, PheonixFooter, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
