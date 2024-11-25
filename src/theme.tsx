@@ -7,7 +7,7 @@ const themestyle = {
     error: "#D32F2F",
     white: "#FFFFFF",
     success: "#2E7D32",
-    success1: "#FBC6BB",
+    successLight: "#FBC6BB",
   },
   button: {
     color: "#181D8C",

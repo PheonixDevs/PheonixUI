@@ -41,7 +41,7 @@ const PheonixSnackBar: React.FC<PheonixSnackBarProps> = ({
   const defaultBackgroundColor =
     severity === "success"
       ? themestyle.colors.success
-      : themestyle.colors.success1;
+      : themestyle.colors.successLight;
   const defaultColor =
     severity === "success" ? themestyle.colors.white : themestyle.colors.error;
 
