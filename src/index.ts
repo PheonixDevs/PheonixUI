@@ -7,3 +7,4 @@ export { default as PheonixAutocomplete } from './Components/PheonixAutocomplete
 export { default as PheonixSkeleton } from './Components/PheonixSkeleton';
 export { default as PheonixDialog } from './Components/PheonixDialog';
 export { default as PheonixTextarea } from './Components/PheonixTextarea';
+export { default as PheonixFooter } from './Components/PheonixFooter';

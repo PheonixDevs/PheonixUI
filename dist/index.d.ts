@@ -140,4 +140,16 @@ interface PhoenixTextareaProps extends Omit<TextFieldProps, 'multiline'> {
 }
 declare const PhoenixTextarea: React.FC<PhoenixTextareaProps>;
 
-export { PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixButton, PheonixDialog, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
+interface PheonixFooterProps {
+    footerText?: string;
+    companyName?: string;
+    companyLink?: string;
+    policyText?: string;
+    policyLink?: string;
+    style?: React$1.CSSProperties;
+    textStyle?: React$1.CSSProperties;
+    linkStyle?: React$1.CSSProperties;
+}
+declare const PheonixFooter: React$1.FC<PheonixFooterProps>;
+
+export { PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixButton, PheonixDialog, PheonixFooter, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
