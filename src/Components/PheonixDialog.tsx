@@ -84,12 +84,7 @@ const PheonixDialog: React.FC<DialogModalProps> = ({
           marginBottom: "16px",
         }}
       >
-        {/* <img
-          src={RestoreFromTrashIcon}
-          alt="Delete Icon"
-          style={{ margin: "16px 0" }}
-        /> */}
-        <Typography
+       <Typography
           sx={{
             fontWeight: 400,
             fontSize: "14px",
