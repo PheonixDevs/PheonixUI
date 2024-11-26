@@ -163,4 +163,14 @@ interface PheonixBreadcrumbsProps {
 }
 declare const PheonixBreadcrumbs: React$1.FC<PheonixBreadcrumbsProps>;
 
-export { PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixDialog, PheonixFooter, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
+interface AccordionItem {
+    id: number | string;
+    title: string;
+    content: string | React$1.ReactNode;
+}
+interface PheonixAccordionProps {
+    items: AccordionItem[];
+}
+declare const PheonixAccordion: React$1.FC<PheonixAccordionProps>;
+
+export { PheonixAccordion as PheonixAccordian, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixDialog, PheonixFooter, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
