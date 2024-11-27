@@ -12,12 +12,14 @@ interface LoginProps {
   emailTextField?: Omit<React.ComponentProps<typeof PheonixTextField>, 'type'>;
   passwordTextField?: Omit<React.ComponentProps<typeof PheonixTextField>, 'type'>;
   loginButton?: React.ComponentProps<typeof PheonixButton>;
+  paperProps?: React.ComponentProps<typeof PheonixPaper>;
 }
 
 const PheonixLogin: React.FC<LoginProps> = ({ 
   emailTextField = {}, 
   passwordTextField = {}, 
-  loginButton = {} 
+  loginButton = {} ,
+  paperProps = {} 
 }) => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -36,18 +38,17 @@ const PheonixLogin: React.FC<LoginProps> = ({
             display: "flex", 
             alignItems: "center", 
             justifyContent: "center", 
-            height: "100vh", 
           }}
         >
           <PheonixPaper 
             elevation={3} 
             style={{ 
               padding: "20px", 
-              height: "600px", 
               marginLeft: "10px", 
               width: "400PX", 
               borderRadius: "0", 
             }}
+            {...paperProps}
           >
             <Stack spacing={2} direction="column">
               <Box component="form">

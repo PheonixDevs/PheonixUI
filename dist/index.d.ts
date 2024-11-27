@@ -166,7 +166,6 @@ interface PheonixBreadcrumbsProps {
 }
 declare const PheonixBreadcrumbs: React$1.FC<PheonixBreadcrumbsProps>;
 
-<<<<<<< HEAD
 interface PheonixSwitchProps extends SwitchProps {
     onChange?: (event: React$1.ChangeEvent<HTMLInputElement>, checked: boolean) => void;
     sx?: SxProps<Theme>;
@@ -185,8 +184,6 @@ interface PheonixCheckboxProps extends CheckboxProps {
 }
 declare const PheonixCheckbox: React$1.FC<PheonixCheckboxProps>;
 
-export { PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCheckbox, PheonixDialog, PheonixFooter, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
-=======
 interface AccordionItem {
     id: number | string;
     title: string;
@@ -217,5 +214,11 @@ interface PheonixCardProps {
 }
 declare const PheonixCard: React$1.FC<PheonixCardProps>;
 
-export { PheonixAccordion as PheonixAccordian, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixDialog, PheonixFooter, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
->>>>>>> 0f48cca1b1bd3edbb9e55a541c090f92119080e5
+interface LoginProps {
+    emailTextField?: Omit<React$1.ComponentProps<typeof PheonixTextField>, 'type'>;
+    passwordTextField?: Omit<React$1.ComponentProps<typeof PheonixTextField>, 'type'>;
+    loginButton?: React$1.ComponentProps<typeof PheonixButton>;
+}
+declare const PheonixLogin: React$1.FC<LoginProps>;
+
+export { PheonixAccordion as PheonixAccordian, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixDialog, PheonixFooter, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
