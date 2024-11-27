@@ -178,18 +178,18 @@ interface PheonixCardProps {
     description?: string;
     imageSrc?: string;
     imageAlt?: string;
-    buttonText?: string;
-    buttonText2?: string;
-    buttonDisabled?: boolean;
-    buttonText1?: string;
-    buttonDisabled1?: boolean;
-    onClickButton?: () => void;
-    handleCancelbutton?: () => void;
-    style?: React$1.CSSProperties;
+    primaryButtonText?: string;
+    secondaryButtonText?: string;
+    isPrimaryButtonDisabled?: boolean;
+    tertiaryButtonText?: string;
+    isTertiaryButtonDisabled?: boolean;
+    onPrimaryButtonClick?: () => void;
+    onSecondaryButtonClick?: () => void;
+    Styles?: React$1.CSSProperties;
     sx?: SxProps$2;
     children?: React$1.ReactNode;
-    height?: string | number;
-    width?: string | number;
+    cardHeight?: string | number;
+    cardWidth?: string | number;
 }
 declare const PheonixCard: React$1.FC<PheonixCardProps>;
 
