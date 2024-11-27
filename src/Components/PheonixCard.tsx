@@ -8,24 +8,25 @@ import {
   SxProps,
   Box,
 } from "@mui/material";
+import themestyle from "../theme";
 
 interface PheonixCardProps {
   title?: string;
   description?: string;
   imageSrc?: string;
   imageAlt?: string;
-  buttonText?: string;
-  buttonText2?: string;
-  buttonDisabled?: boolean;
-  buttonText1?: string;
-  buttonDisabled1?: boolean;
-  onClickButton?: () => void;
-  handleCancelbutton?: () => void;
-  style?: React.CSSProperties;
-  sx?: SxProps; 
+  primaryButtonText?: string;
+  secondaryButtonText?: string;
+  isPrimaryButtonDisabled?: boolean;
+  tertiaryButtonText?: string;
+  isTertiaryButtonDisabled?: boolean;
+  onPrimaryButtonClick?: () => void;
+  onSecondaryButtonClick?: () => void;
+  Styles?: React.CSSProperties;
+  sx?: SxProps;
   children?: React.ReactNode;
-  height?: string | number; 
-  width?: string | number; 
+  cardHeight?: string | number;
+  cardWidth?: string | number;
 }
 
 const PheonixCard: React.FC<PheonixCardProps> = ({
@@ -33,33 +34,32 @@ const PheonixCard: React.FC<PheonixCardProps> = ({
   description,
   imageSrc,
   imageAlt,
-  buttonText,
-  buttonDisabled,
-  buttonText1,
-  buttonDisabled1,
-  onClickButton,
-  buttonText2,
-  handleCancelbutton,
+  primaryButtonText,
+  isPrimaryButtonDisabled,
+  tertiaryButtonText,
+  isTertiaryButtonDisabled,
+  onPrimaryButtonClick,
+  secondaryButtonText,
+  onSecondaryButtonClick,
   children,
-  height = "auto",
-  width = "calc(100% - 20px)",
+  cardHeight = "auto",
+  cardWidth = "calc(100% - 20px)",
   sx,
-
 }) => {
   return (
-   <Box
-    sx={{
-        width: typeof width === "number" ? `${width}px` : width,
-        height: typeof height === "number" ? `${height}px` : height,
-        ...sx
+    <Box
+      sx={{
+        width: typeof cardWidth === "number" ? `${cardWidth}px` : cardWidth,
+        height: typeof cardHeight === "number" ? `${cardHeight}px` : cardHeight,
+        ...sx,
       }}
-      
     >
       <Card
         style={{
           borderRadius: "7.5px",
-          width: typeof width === "number" ? `${width}px` : width,
-          height: typeof height === "number" ? `${height}px` : height,
+          width: typeof cardWidth === "number" ? `${cardWidth}px` : cardWidth,
+          height:
+            typeof cardHeight === "number" ? `${cardHeight}px` : cardHeight,
           color: "#034342",
         }}
       >
@@ -86,7 +86,7 @@ const PheonixCard: React.FC<PheonixCardProps> = ({
             <Typography
               variant="h6"
               style={{
-                fontFamily: "Roboto",
+                fontFamily: themestyle.colors.fontfamily,
                 fontWeight: 600,
                 marginBottom: "0.5rem",
                 marginTop: "10px",
@@ -94,19 +94,19 @@ const PheonixCard: React.FC<PheonixCardProps> = ({
             >
               {title}
             </Typography>
-            {buttonText && (
+            {primaryButtonText && (
               <Button
-                disabled={buttonDisabled}
+                disabled={isPrimaryButtonDisabled}
                 variant="contained"
                 color="primary"
                 size="small"
-                onClick={onClickButton}
+                onClick={onPrimaryButtonClick}
                 style={{
                   backgroundColor: "#032C43",
                   color: "white",
                 }}
               >
-                {buttonText}
+                {primaryButtonText}
               </Button>
             )}
           </div>
@@ -116,15 +116,16 @@ const PheonixCard: React.FC<PheonixCardProps> = ({
               sx={{
                 color: "text.secondary",
                 marginBottom: "1rem",
+                fontFamily: themestyle.colors.fontfamily,
               }}
             >
               {description}
             </Typography>
           )}
           {children}
-          {(buttonText1 || buttonText2) && (
+          {(tertiaryButtonText || secondaryButtonText) && (
             <div style={{ marginTop: "1rem" }}>
-              {buttonText2 && (
+              {secondaryButtonText && (
                 <Button
                   variant="contained"
                   style={{
@@ -134,25 +135,25 @@ const PheonixCard: React.FC<PheonixCardProps> = ({
                     padding: "6px 16px",
                   }}
                   size="small"
-                  onClick={handleCancelbutton}
+                  onClick={onSecondaryButtonClick}
                 >
-                  {buttonText2}
+                  {secondaryButtonText}
                 </Button>
               )}
-              {buttonText1 && (
+              {tertiaryButtonText && (
                 <Button
-                  disabled={buttonDisabled1}
+                  disabled={isTertiaryButtonDisabled}
                   variant="contained"
                   size="small"
-                  onClick={onClickButton}
+                  onClick={onPrimaryButtonClick}
                   style={{
                     backgroundColor: "#000000",
-                    opacity: buttonDisabled1 ? 0.2 : 1,
+                    opacity: isTertiaryButtonDisabled ? 0.2 : 1,
                     padding: "6px 16px",
                     color: "white",
                   }}
                 >
-                  {buttonText1}
+                  {tertiaryButtonText}
                 </Button>
               )}
             </div>
