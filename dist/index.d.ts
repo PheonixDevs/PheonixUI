@@ -218,6 +218,7 @@ interface LoginProps {
     emailTextField?: Omit<React$1.ComponentProps<typeof PheonixTextField>, 'type'>;
     passwordTextField?: Omit<React$1.ComponentProps<typeof PheonixTextField>, 'type'>;
     loginButton?: React$1.ComponentProps<typeof PheonixButton>;
+    paperProps?: React$1.ComponentProps<typeof PheonixPaper>;
 }
 declare const PheonixLogin: React$1.FC<LoginProps>;
 
