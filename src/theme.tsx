@@ -42,6 +42,7 @@ const themestyle = {
     borderRadius: "4px",
     margin: "8px 0",
   },
+  
 };
 export default themestyle;
     
