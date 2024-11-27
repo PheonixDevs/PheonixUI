@@ -14,4 +14,4 @@ export { default as PheonixRadioButton } from "./Components/PheonixRadioButton";
 export { default as PheonixCheckbox } from "./Components/PheonixCheckbox";
 export { default as PheonixAccordian } from "./Components/PheonixAccordian";
 export { default as PheonixCard } from "./Components/PheonixCard";
-export {default as PheonixLogin } from "./Components/PheonixLogin";
+export { default as PheonixLogin } from "./Components/PheonixLogin";

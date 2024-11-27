@@ -9,7 +9,11 @@ interface PheonixRadioProps extends RadioProps {
   sx?: SxProps<Theme>;
 }
 
-const PheonixRadio: React.FC<PheonixRadioProps> = ({ onChange, sx, ...props }) => {
+const PheonixRadio: React.FC<PheonixRadioProps> = ({
+  onChange,
+  sx,
+  ...props
+}) => {
   return (
     <Radio
       onChange={onChange}

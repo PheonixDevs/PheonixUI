@@ -5,11 +5,18 @@ import { Theme } from "@mui/material";
 import themestyle from "../theme";
 
 interface PheonixSwitchProps extends SwitchProps {
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>, checked: boolean) => void;
+  onChange?: (
+    event: React.ChangeEvent<HTMLInputElement>,
+    checked: boolean
+  ) => void;
   sx?: SxProps<Theme>;
 }
 
-const PheonixSwitch: React.FC<PheonixSwitchProps> = ({ onChange, sx, ...props }) => {
+const PheonixSwitch: React.FC<PheonixSwitchProps> = ({
+  onChange,
+  sx,
+  ...props
+}) => {
   return (
     <Switch
       onChange={onChange}
