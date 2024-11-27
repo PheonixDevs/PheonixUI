@@ -1,7 +1,7 @@
 import React$1, { ChangeEvent, FocusEvent, ReactNode, KeyboardEvent, CSSProperties } from 'react';
 import { ButtonProps } from '@mui/material/Button';
 import { SxProps, Theme as Theme$1 } from '@mui/material/styles';
-import { Theme, TextFieldProps } from '@mui/material';
+import { Theme, TextFieldProps, SxProps as SxProps$2 } from '@mui/material';
 import { SxProps as SxProps$1 } from '@mui/system';
 import * as react_jsx_runtime from 'react/jsx-runtime';
 import { AutocompleteProps, AutocompleteRenderInputParams } from '@mui/material/Autocomplete';
@@ -166,6 +166,7 @@ interface PheonixBreadcrumbsProps {
 }
 declare const PheonixBreadcrumbs: React$1.FC<PheonixBreadcrumbsProps>;
 
+<<<<<<< HEAD
 interface PheonixSwitchProps extends SwitchProps {
     onChange?: (event: React$1.ChangeEvent<HTMLInputElement>, checked: boolean) => void;
     sx?: SxProps<Theme>;
@@ -185,3 +186,36 @@ interface PheonixCheckboxProps extends CheckboxProps {
 declare const PheonixCheckbox: React$1.FC<PheonixCheckboxProps>;
 
 export { PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCheckbox, PheonixDialog, PheonixFooter, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
+=======
+interface AccordionItem {
+    id: number | string;
+    title: string;
+    content: string | React$1.ReactNode;
+}
+interface PheonixAccordionProps {
+    items: AccordionItem[];
+}
+declare const PheonixAccordion: React$1.FC<PheonixAccordionProps>;
+
+interface PheonixCardProps {
+    title?: string;
+    description?: string;
+    imageSrc?: string;
+    imageAlt?: string;
+    buttonText?: string;
+    buttonText2?: string;
+    buttonDisabled?: boolean;
+    buttonText1?: string;
+    buttonDisabled1?: boolean;
+    onClickButton?: () => void;
+    handleCancelbutton?: () => void;
+    style?: React$1.CSSProperties;
+    sx?: SxProps$2;
+    children?: React$1.ReactNode;
+    height?: string | number;
+    width?: string | number;
+}
+declare const PheonixCard: React$1.FC<PheonixCardProps>;
+
+export { PheonixAccordion as PheonixAccordian, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixDialog, PheonixFooter, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
+>>>>>>> 0f48cca1b1bd3edbb9e55a541c090f92119080e5

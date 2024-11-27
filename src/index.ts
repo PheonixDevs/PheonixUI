@@ -12,3 +12,5 @@ export {default as PheonixBreadcrumbs} from "./Components/PheonixBreadCrumbs";
 export { default as PheonixSwitch } from './Components/PheonixSwitch';
 export { default as PheonixRadioButton } from './Components/PheonixRadioButton';
 export { default as PheonixCheckbox } from './Components/PheonixCheckbox';
+export {default as PheonixAccordian} from "./Components/PheonixAccordian";
+export {default as PheonixCard } from "./Components/PheonixCard";
