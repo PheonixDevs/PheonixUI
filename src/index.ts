@@ -9,3 +9,6 @@ export { default as PheonixDialog } from './Components/PheonixDialog';
 export { default as PheonixTextarea } from './Components/PheonixTextarea';
 export { default as PheonixFooter } from './Components/PheonixFooter';
 export {default as PheonixBreadcrumbs} from "./Components/PheonixBreadCrumbs";
+export { default as PheonixSwitch } from './Components/PheonixSwitch';
+export { default as PheonixRadioButton } from './Components/PheonixRadioButton';
+export { default as PheonixCheckbox } from './Components/PheonixCheckbox';

@@ -6,6 +6,9 @@ import { SxProps as SxProps$1 } from '@mui/system';
 import * as react_jsx_runtime from 'react/jsx-runtime';
 import { AutocompleteProps, AutocompleteRenderInputParams } from '@mui/material/Autocomplete';
 import { SkeletonProps } from '@mui/material/Skeleton';
+import { SwitchProps } from '@mui/material/Switch';
+import { RadioProps } from '@mui/material/Radio';
+import { CheckboxProps } from '@mui/material/Checkbox';
 
 interface PheonixButtonProps extends ButtonProps {
     label?: string;
@@ -163,4 +166,22 @@ interface PheonixBreadcrumbsProps {
 }
 declare const PheonixBreadcrumbs: React$1.FC<PheonixBreadcrumbsProps>;
 
-export { PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixDialog, PheonixFooter, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
+interface PheonixSwitchProps extends SwitchProps {
+    onChange?: (event: React$1.ChangeEvent<HTMLInputElement>, checked: boolean) => void;
+    sx?: SxProps<Theme>;
+}
+declare const PheonixSwitch: React$1.FC<PheonixSwitchProps>;
+
+interface PheonixRadioProps extends RadioProps {
+    onChange?: (event: React$1.ChangeEvent<HTMLInputElement>) => void;
+    sx?: SxProps<Theme>;
+}
+declare const PheonixRadio: React$1.FC<PheonixRadioProps>;
+
+interface PheonixCheckboxProps extends CheckboxProps {
+    onChange?: (event: React$1.ChangeEvent<HTMLInputElement>, checked: boolean) => void;
+    sx?: SxProps<Theme>;
+}
+declare const PheonixCheckbox: React$1.FC<PheonixCheckboxProps>;
+
+export { PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCheckbox, PheonixDialog, PheonixFooter, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
