@@ -34,7 +34,7 @@ const PheonixFooter: React.FC<PheonixFooterProps> = ({
   }, []);
 
   return (
-    <div style={{ display: "flex", justifyContent: "space-between", ...style }}>
+    <div style={{ display: "flex", justifyContent: "space-between", margin:"20px 20px",...style }}>
       <div
         style={{
           position: "relative",
@@ -74,7 +74,7 @@ const PheonixFooter: React.FC<PheonixFooterProps> = ({
             fontSize: "12px",
             fontWeight: 400,
             marginTop: "1px",
-            textDecoration: "none",
+            textDecoration: "underline",
             ...linkStyle,
           }}
         >

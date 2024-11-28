@@ -197,6 +197,33 @@ interface PheonixAccordionProps {
 }
 declare const PheonixAccordion: React__default.FC<PheonixAccordionProps>;
 
+interface PheonixHeaderProps {
+    title?: ReactNode;
+    children?: ReactNode;
+    isSidebarOpen?: boolean;
+    hasSideBar: boolean;
+    logo?: string;
+    logoutIcon?: string;
+    onLogout?: () => void;
+    customStyles?: React__default.CSSProperties;
+}
+declare const PheonixHeader: React__default.FC<PheonixHeaderProps>;
+
+interface PheonixLayoutProps {
+    title?: ReactNode;
+    children: ReactNode;
+    hasSidebar?: boolean;
+    SidebarComponent?: React__default.FC<{
+        isOpen: boolean;
+        onToggle: () => void;
+    }>;
+    isSidebarOpen?: boolean;
+    onToggleSidebar?: () => void;
+    logo?: string;
+    logoutIcon?: string;
+}
+declare const PheonixLayout: React__default.FC<PheonixLayoutProps>;
+
 interface PheonixCardProps {
     title?: string;
     description?: string;
@@ -269,4 +296,17 @@ interface PheonixTableProps {
 }
 declare const PheonixTable: React$1.FC<PheonixTableProps>;
 
-export { PheonixAccordion as PheonixAccordian, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixTable as PheonixDataGrid, PheonixDialog, PheonixFooter, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
+interface PheonixSideBarProps {
+    icon: React__default.ReactNode;
+    text: string;
+    to: string;
+    selected?: boolean;
+    onSelect: (to: string) => void;
+    boxSx?: SxProps$2<Theme>;
+    listItemSx?: SxProps$2<Theme>;
+    listIconSx?: SxProps$2<Theme>;
+    listTextSx?: SxProps$2<Theme>;
+}
+declare const PheonixSideBar: React__default.FC<PheonixSideBarProps>;
+
+export { PheonixAccordion, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixTable as PheonixDataGrid, PheonixDialog, PheonixFooter, PheonixHeader, PheonixLayout, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSideBar, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
