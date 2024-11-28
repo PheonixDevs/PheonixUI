@@ -290,9 +290,6 @@ interface PheonixTableProps {
     loading?: boolean;
     onSearchQueryChange?: (newQuery: string) => void;
     searchQuery: string;
-    isCollectionScreen?: boolean;
-    isAccountScreen?: boolean;
-    screen?: string;
 }
 declare const PheonixTable: React$1.FC<PheonixTableProps>;
 
