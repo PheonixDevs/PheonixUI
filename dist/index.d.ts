@@ -1,11 +1,14 @@
 import React$1, { ChangeEvent, FocusEvent, ReactNode, KeyboardEvent, CSSProperties } from 'react';
 import { ButtonProps } from '@mui/material/Button';
 import { SxProps, Theme as Theme$1 } from '@mui/material/styles';
-import { Theme, TextFieldProps } from '@mui/material';
+import { Theme, TextFieldProps, SxProps as SxProps$2 } from '@mui/material';
 import { SxProps as SxProps$1 } from '@mui/system';
 import * as react_jsx_runtime from 'react/jsx-runtime';
 import { AutocompleteProps, AutocompleteRenderInputParams } from '@mui/material/Autocomplete';
 import { SkeletonProps } from '@mui/material/Skeleton';
+import { SwitchProps } from '@mui/material/Switch';
+import { RadioProps } from '@mui/material/Radio';
+import { CheckboxProps } from '@mui/material/Checkbox';
 
 interface PheonixButtonProps extends ButtonProps {
     label?: string;
@@ -163,6 +166,24 @@ interface PheonixBreadcrumbsProps {
 }
 declare const PheonixBreadcrumbs: React$1.FC<PheonixBreadcrumbsProps>;
 
+interface PheonixSwitchProps extends SwitchProps {
+    onChange?: (event: React$1.ChangeEvent<HTMLInputElement>, checked: boolean) => void;
+    sx?: SxProps<Theme>;
+}
+declare const PheonixSwitch: React$1.FC<PheonixSwitchProps>;
+
+interface PheonixRadioProps extends RadioProps {
+    onChange?: (event: React$1.ChangeEvent<HTMLInputElement>) => void;
+    sx?: SxProps<Theme>;
+}
+declare const PheonixRadio: React$1.FC<PheonixRadioProps>;
+
+interface PheonixCheckboxProps extends CheckboxProps {
+    onChange?: (event: React$1.ChangeEvent<HTMLInputElement>, checked: boolean) => void;
+    sx?: SxProps<Theme>;
+}
+declare const PheonixCheckbox: React$1.FC<PheonixCheckboxProps>;
+
 interface AccordionItem {
     id: number | string;
     title: string;
@@ -173,6 +194,7 @@ interface PheonixAccordionProps {
 }
 declare const PheonixAccordion: React$1.FC<PheonixAccordionProps>;
 
+<<<<<<< HEAD
 interface PheonixHeaderProps {
     title?: ReactNode;
     children?: ReactNode;
@@ -201,3 +223,34 @@ interface PheonixLayoutProps {
 declare const PheonixLayout: React$1.FC<PheonixLayoutProps>;
 
 export { PheonixAccordion, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixDialog, PheonixFooter, PheonixHeader, PheonixLayout, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
+=======
+interface PheonixCardProps {
+    title?: string;
+    description?: string;
+    imageSrc?: string;
+    imageAlt?: string;
+    primaryButtonText?: string;
+    secondaryButtonText?: string;
+    isPrimaryButtonDisabled?: boolean;
+    tertiaryButtonText?: string;
+    isTertiaryButtonDisabled?: boolean;
+    onPrimaryButtonClick?: () => void;
+    onSecondaryButtonClick?: () => void;
+    Styles?: React$1.CSSProperties;
+    sx?: SxProps$2;
+    children?: React$1.ReactNode;
+    cardHeight?: string | number;
+    cardWidth?: string | number;
+}
+declare const PheonixCard: React$1.FC<PheonixCardProps>;
+
+interface LoginProps {
+    emailTextField?: Omit<React$1.ComponentProps<typeof PheonixTextField>, 'type'>;
+    passwordTextField?: Omit<React$1.ComponentProps<typeof PheonixTextField>, 'type'>;
+    loginButton?: React$1.ComponentProps<typeof PheonixButton>;
+    paperProps?: React$1.ComponentProps<typeof PheonixPaper>;
+}
+declare const PheonixLogin: React$1.FC<LoginProps>;
+
+export { PheonixAccordion as PheonixAccordian, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixDialog, PheonixFooter, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
+>>>>>>> 5b114db17370d67dc9d1671f4be0277853227771
