@@ -194,7 +194,6 @@ interface PheonixAccordionProps {
 }
 declare const PheonixAccordion: React$1.FC<PheonixAccordionProps>;
 
-<<<<<<< HEAD
 interface PheonixHeaderProps {
     title?: ReactNode;
     children?: ReactNode;
@@ -222,8 +221,6 @@ interface PheonixLayoutProps {
 }
 declare const PheonixLayout: React$1.FC<PheonixLayoutProps>;
 
-export { PheonixAccordion, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixDialog, PheonixFooter, PheonixHeader, PheonixLayout, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
-=======
 interface PheonixCardProps {
     title?: string;
     description?: string;
@@ -252,10 +249,6 @@ interface LoginProps {
 }
 declare const PheonixLogin: React$1.FC<LoginProps>;
 
-<<<<<<< HEAD
-export { PheonixAccordion as PheonixAccordian, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixDialog, PheonixFooter, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
->>>>>>> 5b114db17370d67dc9d1671f4be0277853227771
-=======
 interface PheonixSideBarProps {
     icon: React$1.ReactNode;
     text: string;
@@ -269,5 +262,4 @@ interface PheonixSideBarProps {
 }
 declare const PheonixSideBar: React$1.FC<PheonixSideBarProps>;
 
-export { PheonixAccordion as PheonixAccordian, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixDialog, PheonixFooter, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSideBar, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
->>>>>>> 0332e9e23f03f0ab775922787e6caef26f4900c9
+export { PheonixAccordion, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixDialog, PheonixFooter, PheonixHeader, PheonixLayout, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSideBar, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
