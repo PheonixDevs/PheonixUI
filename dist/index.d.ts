@@ -173,4 +173,31 @@ interface PheonixAccordionProps {
 }
 declare const PheonixAccordion: React$1.FC<PheonixAccordionProps>;
 
-export { PheonixAccordion as PheonixAccordian, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixDialog, PheonixFooter, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
+interface PheonixHeaderProps {
+    title?: ReactNode;
+    children?: ReactNode;
+    isSidebarOpen?: boolean;
+    hasSideBar: boolean;
+    logo?: string;
+    logoutIcon?: string;
+    onLogout?: () => void;
+    customStyles?: React$1.CSSProperties;
+}
+declare const PheonixHeader: React$1.FC<PheonixHeaderProps>;
+
+interface PheonixLayoutProps {
+    title?: ReactNode;
+    children: ReactNode;
+    hasSidebar?: boolean;
+    SidebarComponent?: React$1.FC<{
+        isOpen: boolean;
+        onToggle: () => void;
+    }>;
+    isSidebarOpen?: boolean;
+    onToggleSidebar?: () => void;
+    logo?: string;
+    logoutIcon?: string;
+}
+declare const PheonixLayout: React$1.FC<PheonixLayoutProps>;
+
+export { PheonixAccordion, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixDialog, PheonixFooter, PheonixHeader, PheonixLayout, PheonixPaper, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };

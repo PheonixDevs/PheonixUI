@@ -9,4 +9,6 @@ export { default as PheonixDialog } from './Components/PheonixDialog';
 export { default as PheonixTextarea } from './Components/PheonixTextarea';
 export { default as PheonixFooter } from './Components/PheonixFooter';
 export {default as PheonixBreadcrumbs} from "./Components/PheonixBreadCrumbs";
-export {default as PheonixAccordian} from "./Components/PheonixAccordian";
+export {default as PheonixAccordion} from "./Components/PheonixAccordion";
+export {default as PheonixHeader} from "./Components/PheonixHeader";
+export {default as PheonixLayout} from "./Components/PheonixLayout";
