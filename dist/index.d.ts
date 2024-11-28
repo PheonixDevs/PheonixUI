@@ -194,6 +194,33 @@ interface PheonixAccordionProps {
 }
 declare const PheonixAccordion: React$1.FC<PheonixAccordionProps>;
 
+interface PheonixHeaderProps {
+    title?: ReactNode;
+    children?: ReactNode;
+    isSidebarOpen?: boolean;
+    hasSideBar: boolean;
+    logo?: string;
+    logoutIcon?: string;
+    onLogout?: () => void;
+    customStyles?: React$1.CSSProperties;
+}
+declare const PheonixHeader: React$1.FC<PheonixHeaderProps>;
+
+interface PheonixLayoutProps {
+    title?: ReactNode;
+    children: ReactNode;
+    hasSidebar?: boolean;
+    SidebarComponent?: React$1.FC<{
+        isOpen: boolean;
+        onToggle: () => void;
+    }>;
+    isSidebarOpen?: boolean;
+    onToggleSidebar?: () => void;
+    logo?: string;
+    logoutIcon?: string;
+}
+declare const PheonixLayout: React$1.FC<PheonixLayoutProps>;
+
 interface PheonixCardProps {
     title?: string;
     description?: string;
@@ -235,4 +262,4 @@ interface PheonixSideBarProps {
 }
 declare const PheonixSideBar: React$1.FC<PheonixSideBarProps>;
 
-export { PheonixAccordion as PheonixAccordian, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixDialog, PheonixFooter, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSideBar, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
+export { PheonixAccordion, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixDialog, PheonixFooter, PheonixHeader, PheonixLayout, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSideBar, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
