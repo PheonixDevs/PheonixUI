@@ -17,3 +17,4 @@ export {default as PheonixHeader} from "./Components/PheonixHeader";
 export {default as PheonixLayout} from "./Components/PheonixLayout";
 export { default as PheonixCard } from "./Components/PheonixCard";
 export { default as PheonixLogin } from "./Components/PheonixLogin";
+export { default as PheonixSideBar } from "./Components/PheonixSidebar"

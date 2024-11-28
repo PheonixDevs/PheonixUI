@@ -245,12 +245,29 @@ interface PheonixCardProps {
 declare const PheonixCard: React$1.FC<PheonixCardProps>;
 
 interface LoginProps {
-    emailTextField?: Omit<React$1.ComponentProps<typeof PheonixTextField>, 'type'>;
-    passwordTextField?: Omit<React$1.ComponentProps<typeof PheonixTextField>, 'type'>;
+    emailTextField?: Omit<React$1.ComponentProps<typeof PheonixTextField>, "type">;
+    passwordTextField?: Omit<React$1.ComponentProps<typeof PheonixTextField>, "type">;
     loginButton?: React$1.ComponentProps<typeof PheonixButton>;
     paperProps?: React$1.ComponentProps<typeof PheonixPaper>;
 }
 declare const PheonixLogin: React$1.FC<LoginProps>;
 
+<<<<<<< HEAD
 export { PheonixAccordion as PheonixAccordian, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixDialog, PheonixFooter, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
 >>>>>>> 5b114db17370d67dc9d1671f4be0277853227771
+=======
+interface PheonixSideBarProps {
+    icon: React$1.ReactNode;
+    text: string;
+    to: string;
+    selected?: boolean;
+    onSelect: (to: string) => void;
+    boxSx?: SxProps$2<Theme>;
+    listItemSx?: SxProps$2<Theme>;
+    listIconSx?: SxProps$2<Theme>;
+    listTextSx?: SxProps$2<Theme>;
+}
+declare const PheonixSideBar: React$1.FC<PheonixSideBarProps>;
+
+export { PheonixAccordion as PheonixAccordian, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixDialog, PheonixFooter, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSideBar, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
+>>>>>>> 0332e9e23f03f0ab775922787e6caef26f4900c9
