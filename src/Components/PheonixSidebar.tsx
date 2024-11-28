@@ -37,32 +37,34 @@ const PheonixSideBar: React.FC<PheonixSideBarProps> = ({
       sx={{
         display: "flex",
         alignItems: "center",
-        width: "100%",
+        backgroundColor: "#0C1445",
         ...boxSx,
       }}
     >
       <ListItem
         sx={{
           textDecoration: "none",
-          height: "auto", 
-          backgroundColor: "#0C1445",
-          borderTopLeftRadius: "0px",
-          borderBottomLeftRadius: "0px",
+          height: "auto",
           flex: 1,
           display: "flex",
-          flexDirection: "column", 
-          alignItems: "center", 
+          flexDirection: "column",
+          alignItems: "center",
           ...listItemSx,
         }}
         onClick={() => onSelect(to)}
       >
-          <ListItemIcon
+        <ListItemIcon
           sx={{
-            color: selected ? " #FFFFFF" : "inherit",
-            backgroundColor: selected ? " #3FA3F7" : "inherit",
-            borderRadius:"1px",
+            borderRadius: "8px",
             justifyContent: "center",
-            alignItems: "center", 
+            alignItems: "center",
+            color: "#FFFFFF",
+            backgroundColor: selected ? "#3FA3F7" : "inherit",
+            padding: "8px",
+            "&:hover": {
+              backgroundColor: "#3FA3F7",
+              borderRadius: "8px",
+            },
             ...listIconSx,
           }}
         >
@@ -72,10 +74,11 @@ const PheonixSideBar: React.FC<PheonixSideBarProps> = ({
           primary={text}
           sx={{
             textAlign: "center",
-            fontSize: "18px",
-            fontWeight: "700",
+            fontSize: "10px",
+            fontWeight: "400",
+            color: "#FFFFFF",
             fontFamily: themestyle.colors.fontfamily,
-            ...listTextSx
+            ...listTextSx,
           }}
         />
       </ListItem>
