@@ -1,4 +1,5 @@
-import React$1, { ChangeEvent, FocusEvent, ReactNode, KeyboardEvent, CSSProperties } from 'react';
+import * as React$1 from 'react';
+import React__default, { ChangeEvent, FocusEvent, ReactNode, KeyboardEvent, CSSProperties } from 'react';
 import { ButtonProps } from '@mui/material/Button';
 import { SxProps, Theme as Theme$1 } from '@mui/material/styles';
 import { Theme, TextFieldProps, SxProps as SxProps$2 } from '@mui/material';
@@ -9,13 +10,15 @@ import { SkeletonProps } from '@mui/material/Skeleton';
 import { SwitchProps } from '@mui/material/Switch';
 import { RadioProps } from '@mui/material/Radio';
 import { CheckboxProps } from '@mui/material/Checkbox';
+import { GridColDef } from '@mui/x-data-grid';
+import { Dayjs } from 'dayjs';
 
 interface PheonixButtonProps extends ButtonProps {
     label?: string;
-    onClick?: (event: React$1.MouseEvent<HTMLElement>) => void;
+    onClick?: (event: React__default.MouseEvent<HTMLElement>) => void;
     sx?: SxProps<Theme>;
 }
-declare const PheonixButton: React$1.FC<PheonixButtonProps>;
+declare const PheonixButton: React__default.FC<PheonixButtonProps>;
 
 interface PheonixSnackBarProps {
     vertical: "top" | "bottom";
@@ -23,7 +26,7 @@ interface PheonixSnackBarProps {
     open: boolean;
     onClose?: () => void;
     message?: string;
-    customAction?: React$1.ReactNode;
+    customAction?: React__default.ReactNode;
     severity?: "success" | "error";
     backgroundColor?: string;
     color?: string;
@@ -31,7 +34,7 @@ interface PheonixSnackBarProps {
     height?: string;
     sx?: SxProps<Theme>;
 }
-declare const PheonixSnackBar: React$1.FC<PheonixSnackBarProps>;
+declare const PheonixSnackBar: React__default.FC<PheonixSnackBarProps>;
 
 interface PheonixTextFieldProps {
     id?: string;
@@ -61,12 +64,12 @@ interface PheonixTextFieldProps {
 declare const PheonixTextField: React.FC<PheonixTextFieldProps>;
 
 interface PheonixBoxProps {
-    children?: React$1.ReactNode;
-    component?: React$1.ElementType;
-    style?: React$1.CSSProperties;
+    children?: React__default.ReactNode;
+    component?: React__default.ElementType;
+    style?: React__default.CSSProperties;
     sx?: SxProps<Theme$1>;
 }
-declare const PheonixBox: React$1.FC<PheonixBoxProps>;
+declare const PheonixBox: React__default.FC<PheonixBoxProps>;
 
 interface PheonixPaperProps {
     children: ReactNode;
@@ -88,7 +91,7 @@ interface PheonixPaperProps {
     backgroundColor?: string;
     style?: CSSProperties;
 }
-declare const PheonixPaper: React$1.FC<PheonixPaperProps>;
+declare const PheonixPaper: React__default.FC<PheonixPaperProps>;
 
 interface PhoenixAutocompleteProps<T, Multiple extends boolean | undefined = false, DisableClearable extends boolean | undefined = false, FreeSolo extends boolean | undefined = false> extends Omit<AutocompleteProps<T, Multiple, DisableClearable, FreeSolo>, 'renderInput'> {
     name?: string;
@@ -108,7 +111,7 @@ declare const PhoenixAutocomplete: <T extends unknown, Multiple extends boolean 
 interface PheonixSkeletonProps extends SkeletonProps {
     sx?: SxProps<Theme>;
 }
-declare const PheonixSkeleton: React$1.FC<PheonixSkeletonProps>;
+declare const PheonixSkeleton: React__default.FC<PheonixSkeletonProps>;
 
 interface DialogModalProps {
     open: boolean;
@@ -122,7 +125,7 @@ interface DialogModalProps {
     height?: string;
     width?: string;
 }
-declare const PheonixDialog: React$1.FC<DialogModalProps>;
+declare const PheonixDialog: React__default.FC<DialogModalProps>;
 
 interface PhoenixTextareaProps extends Omit<TextFieldProps, 'multiline'> {
     id?: string;
@@ -149,11 +152,11 @@ interface PheonixFooterProps {
     companyLink?: string;
     policyText?: string;
     policyLink?: string;
-    style?: React$1.CSSProperties;
-    textStyle?: React$1.CSSProperties;
-    linkStyle?: React$1.CSSProperties;
+    style?: React__default.CSSProperties;
+    textStyle?: React__default.CSSProperties;
+    linkStyle?: React__default.CSSProperties;
 }
-declare const PheonixFooter: React$1.FC<PheonixFooterProps>;
+declare const PheonixFooter: React__default.FC<PheonixFooterProps>;
 
 interface BreadcrumbItem {
     text: string;
@@ -164,35 +167,35 @@ interface PheonixBreadcrumbsProps {
     textStyle?: object;
     linkStyle?: object;
 }
-declare const PheonixBreadcrumbs: React$1.FC<PheonixBreadcrumbsProps>;
+declare const PheonixBreadcrumbs: React__default.FC<PheonixBreadcrumbsProps>;
 
 interface PheonixSwitchProps extends SwitchProps {
-    onChange?: (event: React$1.ChangeEvent<HTMLInputElement>, checked: boolean) => void;
+    onChange?: (event: React__default.ChangeEvent<HTMLInputElement>, checked: boolean) => void;
     sx?: SxProps<Theme>;
 }
-declare const PheonixSwitch: React$1.FC<PheonixSwitchProps>;
+declare const PheonixSwitch: React__default.FC<PheonixSwitchProps>;
 
 interface PheonixRadioProps extends RadioProps {
-    onChange?: (event: React$1.ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (event: React__default.ChangeEvent<HTMLInputElement>) => void;
     sx?: SxProps<Theme>;
 }
-declare const PheonixRadio: React$1.FC<PheonixRadioProps>;
+declare const PheonixRadio: React__default.FC<PheonixRadioProps>;
 
 interface PheonixCheckboxProps extends CheckboxProps {
-    onChange?: (event: React$1.ChangeEvent<HTMLInputElement>, checked: boolean) => void;
+    onChange?: (event: React__default.ChangeEvent<HTMLInputElement>, checked: boolean) => void;
     sx?: SxProps<Theme>;
 }
-declare const PheonixCheckbox: React$1.FC<PheonixCheckboxProps>;
+declare const PheonixCheckbox: React__default.FC<PheonixCheckboxProps>;
 
 interface AccordionItem {
     id: number | string;
     title: string;
-    content: string | React$1.ReactNode;
+    content: string | React__default.ReactNode;
 }
 interface PheonixAccordionProps {
     items: AccordionItem[];
 }
-declare const PheonixAccordion: React$1.FC<PheonixAccordionProps>;
+declare const PheonixAccordion: React__default.FC<PheonixAccordionProps>;
 
 interface PheonixHeaderProps {
     title?: ReactNode;
@@ -202,15 +205,15 @@ interface PheonixHeaderProps {
     logo?: string;
     logoutIcon?: string;
     onLogout?: () => void;
-    customStyles?: React$1.CSSProperties;
+    customStyles?: React__default.CSSProperties;
 }
-declare const PheonixHeader: React$1.FC<PheonixHeaderProps>;
+declare const PheonixHeader: React__default.FC<PheonixHeaderProps>;
 
 interface PheonixLayoutProps {
     title?: ReactNode;
     children: ReactNode;
     hasSidebar?: boolean;
-    SidebarComponent?: React$1.FC<{
+    SidebarComponent?: React__default.FC<{
         isOpen: boolean;
         onToggle: () => void;
     }>;
@@ -219,7 +222,7 @@ interface PheonixLayoutProps {
     logo?: string;
     logoutIcon?: string;
 }
-declare const PheonixLayout: React$1.FC<PheonixLayoutProps>;
+declare const PheonixLayout: React__default.FC<PheonixLayoutProps>;
 
 interface PheonixCardProps {
     title?: string;
@@ -233,24 +236,65 @@ interface PheonixCardProps {
     isTertiaryButtonDisabled?: boolean;
     onPrimaryButtonClick?: () => void;
     onSecondaryButtonClick?: () => void;
-    Styles?: React$1.CSSProperties;
+    Styles?: React__default.CSSProperties;
     sx?: SxProps$2;
-    children?: React$1.ReactNode;
+    children?: React__default.ReactNode;
     cardHeight?: string | number;
     cardWidth?: string | number;
 }
-declare const PheonixCard: React$1.FC<PheonixCardProps>;
+declare const PheonixCard: React__default.FC<PheonixCardProps>;
 
 interface LoginProps {
-    emailTextField?: Omit<React$1.ComponentProps<typeof PheonixTextField>, "type">;
-    passwordTextField?: Omit<React$1.ComponentProps<typeof PheonixTextField>, "type">;
-    loginButton?: React$1.ComponentProps<typeof PheonixButton>;
-    paperProps?: React$1.ComponentProps<typeof PheonixPaper>;
+    emailTextField?: Omit<React__default.ComponentProps<typeof PheonixTextField>, "type">;
+    passwordTextField?: Omit<React__default.ComponentProps<typeof PheonixTextField>, "type">;
+    loginButton?: React__default.ComponentProps<typeof PheonixButton>;
+    paperProps?: React__default.ComponentProps<typeof PheonixPaper>;
 }
-declare const PheonixLogin: React$1.FC<LoginProps>;
+declare const PheonixLogin: React__default.FC<LoginProps>;
+
+interface ToolbarProps {
+    onExportClick?: () => void;
+    onFilterChange?: (value: string) => void;
+}
+interface PheonixTableProps {
+    columns: GridColDef[];
+    rows: any[];
+    height?: number;
+    width?: string;
+    sx?: Record<string, any>;
+    components?: {
+        Toolbar?: React$1.ElementType<ToolbarProps>;
+    };
+    paginationModel?: {
+        pageSize: number;
+        page: number;
+    };
+    onPaginationModelChange?: (newPaginationModel: {
+        pageSize: number;
+        page: number;
+    }) => void;
+    pageSizeChange?: (newPageSize: number) => void;
+    pageChange?: (newPage: number) => void;
+    selectedDate?: Dayjs | null;
+    setSelectedDate?: React$1.Dispatch<React$1.SetStateAction<Dayjs | null>>;
+    handleDateChange?: (newDate: Dayjs | null) => void;
+    pageSizeOptions?: number[];
+    loader?: React$1.ReactNode;
+    rowCount?: number;
+    pageSize?: number;
+    currentPage?: number;
+    paginationMeta?: any;
+    paginationMode?: any;
+    customProp?: string;
+    style?: CSSProperties;
+    loading?: boolean;
+    onSearchQueryChange?: (newQuery: string) => void;
+    searchQuery: string;
+}
+declare const PheonixTable: React$1.FC<PheonixTableProps>;
 
 interface PheonixSideBarProps {
-    icon: React$1.ReactNode;
+    icon: React__default.ReactNode;
     text: string;
     to: string;
     selected?: boolean;
@@ -260,18 +304,27 @@ interface PheonixSideBarProps {
     listIconSx?: SxProps$2<Theme>;
     listTextSx?: SxProps$2<Theme>;
 }
-declare const PheonixSideBar: React$1.FC<PheonixSideBarProps>;
+declare const PheonixSideBar: React__default.FC<PheonixSideBarProps>;
 
-interface PheonixTabProps {
-    label: React$1.ReactNode;
-    index: number;
-    value: number;
-    handleChange: (event: React$1.SyntheticEvent, newValue: number) => void;
-    icon?: React$1.ReactNode;
+interface TabDataItem {
+    label: string;
+    content?: React__default.ReactNode;
     sx?: SxProps<Theme$1>;
-    customStyles?: React$1.CSSProperties;
-    component?: React$1.ElementType;
 }
-declare const PheonixTab: React$1.FC<PheonixTabProps>;
+interface CustomTabsProps {
+    tabData: TabDataItem[];
+    onChange?: (event: React__default.SyntheticEvent, newValue: number) => void;
+    tabsProps?: {
+        sx?: React__default.CSSProperties;
+        [key: string]: any;
+    };
+    tabProps?: {
+        sx?: React__default.CSSProperties;
+        [key: string]: any;
+    };
+    variant?: "standard" | "fullWidth" | "scrollable";
+    orientation?: "horizontal" | "vertical";
+}
+declare const PheonixTabs: React__default.FC<CustomTabsProps>;
 
-export { PheonixAccordion, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixDialog, PheonixFooter, PheonixHeader, PheonixLayout, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSideBar, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PheonixTab, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
+export { PheonixAccordion, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixTable as PheonixDataGrid, PheonixDialog, PheonixFooter, PheonixHeader, PheonixLayout, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSideBar, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PheonixTabs, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
