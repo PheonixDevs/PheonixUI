@@ -498,13 +498,13 @@ const App = () => {
 export default App; 
 ```
 ---
-## License
-All Rights Reserved By Pheonix Solutions.
+## License 
+All Rights Reserved By [Pheonix Solutions](https://www.pheonixsolutions.com)
 
 ---
 
 ## Support
-For questions or issues, contact us at dev@pheonixsolutions.com.
+For questions or issues, contact us at dev@pheonixsolutions.com
 
 ---
 
