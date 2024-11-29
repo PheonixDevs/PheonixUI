@@ -262,4 +262,16 @@ interface PheonixSideBarProps {
 }
 declare const PheonixSideBar: React$1.FC<PheonixSideBarProps>;
 
-export { PheonixAccordion, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixDialog, PheonixFooter, PheonixHeader, PheonixLayout, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSideBar, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
+interface PheonixTabProps {
+    label: React$1.ReactNode;
+    index: number;
+    value: number;
+    handleChange: (event: React$1.SyntheticEvent, newValue: number) => void;
+    icon?: React$1.ReactNode;
+    sx?: SxProps<Theme$1>;
+    customStyles?: React$1.CSSProperties;
+    component?: React$1.ElementType;
+}
+declare const PheonixTab: React$1.FC<PheonixTabProps>;
+
+export { PheonixAccordion, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixDialog, PheonixFooter, PheonixHeader, PheonixLayout, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSideBar, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PheonixTab, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };

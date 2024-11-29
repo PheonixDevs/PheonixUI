@@ -6,7 +6,10 @@ import {
   SxProps,
   Theme,
   Box,
+  Tooltip,
+  tooltipClasses,
 } from "@mui/material";
+import { styled } from "@mui/system";
 import themestyle from "../theme";
 
 interface PheonixSideBarProps {
@@ -20,6 +23,23 @@ interface PheonixSideBarProps {
   listIconSx?: SxProps<Theme>;
   listTextSx?: SxProps<Theme>;
 }
+
+const CustomTooltip = styled(({ className, ...props }: any) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))(() => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: "white",
+    color: "black",
+    fontSize: "14px",
+    fontWeight: "500",
+    fontFamily: themestyle.colors.fontfamily,
+    borderRadius: "8px",
+    padding: "6px 12px",
+  },
+  [`& .${tooltipClasses.arrow}`]: {
+    color: "white",
+  },
+}));
 
 const PheonixSideBar: React.FC<PheonixSideBarProps> = ({
   icon,
@@ -37,45 +57,47 @@ const PheonixSideBar: React.FC<PheonixSideBarProps> = ({
       sx={{
         display: "flex",
         alignItems: "center",
-        width: "100%",
+        backgroundColor: "#0C1445", 
         ...boxSx,
       }}
     >
       <ListItem
         sx={{
           textDecoration: "none",
-          height: "auto", 
-          backgroundColor: "#0C1445",
-          borderTopLeftRadius: "0px",
-          borderBottomLeftRadius: "0px",
+          height: "auto",
           flex: 1,
           display: "flex",
-          flexDirection: "column", 
-          alignItems: "center", 
+          flexDirection: "column",
+          alignItems: "center",
           ...listItemSx,
         }}
         onClick={() => onSelect(to)}
       >
+        <CustomTooltip title={text} placement="right">
           <ListItemIcon
-          sx={{
-            color: selected ? " #FFFFFF" : "inherit",
-            backgroundColor: selected ? " #3FA3F7" : "inherit",
-            borderRadius:"1px",
-            justifyContent: "center",
-            alignItems: "center", 
-            ...listIconSx,
-          }}
-        >
-          {icon}
-        </ListItemIcon>
+            sx={{
+              justifyContent: "center",
+              alignItems: "center",
+               color: "#FFFFFF", 
+              backgroundColor: "inherit",
+              ...listIconSx,
+              '.css-1jis7gu-MuiListItemIcon-root':{
+                color:"#FFFFFF",
+              }
+            }}
+          >
+            {icon}
+          </ListItemIcon>
+        </CustomTooltip>
         <ListItemText
           primary={text}
           sx={{
             textAlign: "center",
-            fontSize: "18px",
-            fontWeight: "700",
+            fontSize: "12px",
+            fontWeight: "400",
+            color:  "#FFFFFF", 
             fontFamily: themestyle.colors.fontfamily,
-            ...listTextSx
+            ...listTextSx,
           }}
         />
       </ListItem>
