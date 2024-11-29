@@ -306,4 +306,25 @@ interface PheonixSideBarProps {
 }
 declare const PheonixSideBar: React__default.FC<PheonixSideBarProps>;
 
-export { PheonixAccordion, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixTable as PheonixDataGrid, PheonixDialog, PheonixFooter, PheonixHeader, PheonixLayout, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSideBar, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };
+interface TabDataItem {
+    label: string;
+    content?: React__default.ReactNode;
+    sx?: SxProps<Theme$1>;
+}
+interface CustomTabsProps {
+    tabData: TabDataItem[];
+    onChange?: (event: React__default.SyntheticEvent, newValue: number) => void;
+    tabsProps?: {
+        sx?: React__default.CSSProperties;
+        [key: string]: any;
+    };
+    tabProps?: {
+        sx?: React__default.CSSProperties;
+        [key: string]: any;
+    };
+    variant?: "standard" | "fullWidth" | "scrollable";
+    orientation?: "horizontal" | "vertical";
+}
+declare const PheonixTabs: React__default.FC<CustomTabsProps>;
+
+export { PheonixAccordion, PhoenixAutocomplete as PheonixAutocomplete, PheonixBox, PheonixBreadcrumbs, PheonixButton, PheonixCard, PheonixCheckbox, PheonixTable as PheonixDataGrid, PheonixDialog, PheonixFooter, PheonixHeader, PheonixLayout, PheonixLogin, PheonixPaper, PheonixRadio as PheonixRadioButton, PheonixSideBar, PheonixSkeleton, PheonixSnackBar as PheonixSnackbar, PheonixSwitch, PheonixTabs, PhoenixTextarea as PheonixTextarea, PheonixTextField as PheonixTextfield };

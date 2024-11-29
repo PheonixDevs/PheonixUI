@@ -19,3 +19,4 @@ export { default as PheonixCard } from "./Components/PheonixCard";
 export { default as PheonixLogin } from "./Components/PheonixLogin";
 export { default as PheonixDataGrid } from "./Components/PheonixDataGrid";
 export { default as PheonixSideBar } from "./Components/PheonixSidebar";
+export { default as PheonixTabs } from "./Components/PheonixTabs";
