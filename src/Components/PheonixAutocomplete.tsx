@@ -1,10 +1,7 @@
 import {
-    ChangeEvent,
-    SyntheticEvent,
     ReactNode,
     CSSProperties,
   } from "react";
-  import { SxProps } from "@mui/system";
   import Autocomplete, { AutocompleteProps } from "@mui/material/Autocomplete";
   import TextField from "@mui/material/TextField";
   import { AutocompleteRenderInputParams } from "@mui/material/Autocomplete";
