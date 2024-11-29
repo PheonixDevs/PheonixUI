@@ -17,7 +17,9 @@ yarn add phoenixui
 ## Commands to remove react & react-dom from node modules:
 
 rd /s /q node_modules\react
+
 rd /s /q node_modules\react-dom
+
 ---
 ## v1.0.0 - List of Components 
 
@@ -493,8 +495,8 @@ const App = () => {
   );
 };
 
-export default App;
-
+export default App; 
+```
 ---
 ## License
 All Rights Reserved By Pheonix Solutions.
