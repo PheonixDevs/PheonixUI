@@ -1,4 +1,4 @@
-import * as React$1 from 'react';
+import * as React from 'react';
 import React__default, { ChangeEvent, FocusEvent, ReactNode, KeyboardEvent, CSSProperties } from 'react';
 import { ButtonProps } from '@mui/material/Button';
 import { SxProps, Theme as Theme$1 } from '@mui/material/styles';
@@ -50,7 +50,7 @@ interface PheonixTextFieldProps {
     onFocus?: (event: FocusEvent<HTMLInputElement>) => void;
     onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
     endAdornment?: ReactNode;
-    style?: React.CSSProperties;
+    style?: React__default.CSSProperties;
     required?: boolean;
     className?: string;
     error?: boolean;
@@ -61,7 +61,7 @@ interface PheonixTextFieldProps {
     rows?: number;
     onKeyPress?: (event: KeyboardEvent<HTMLInputElement>) => void;
 }
-declare const PheonixTextField: React.FC<PheonixTextFieldProps>;
+declare const PheonixTextField: React__default.FC<PheonixTextFieldProps>;
 
 interface PheonixBoxProps {
     children?: React__default.ReactNode;
@@ -127,7 +127,7 @@ interface DialogModalProps {
 }
 declare const PheonixDialog: React__default.FC<DialogModalProps>;
 
-interface PhoenixTextareaProps extends Omit<TextFieldProps, 'multiline'> {
+interface PhoenixTextareaProps extends Omit<TextFieldProps, "multiline"> {
     id?: string;
     value?: string;
     name?: string;
@@ -144,7 +144,7 @@ interface PhoenixTextareaProps extends Omit<TextFieldProps, 'multiline'> {
     rows?: number;
     className?: string;
 }
-declare const PhoenixTextarea: React.FC<PhoenixTextareaProps>;
+declare const PhoenixTextarea: React__default.FC<PhoenixTextareaProps>;
 
 interface PheonixFooterProps {
     footerText?: string;
@@ -263,7 +263,7 @@ interface PheonixTableProps {
     width?: string;
     sx?: Record<string, any>;
     components?: {
-        Toolbar?: React$1.ElementType<ToolbarProps>;
+        Toolbar?: React.ElementType<ToolbarProps>;
     };
     paginationModel?: {
         pageSize: number;
@@ -276,10 +276,10 @@ interface PheonixTableProps {
     pageSizeChange?: (newPageSize: number) => void;
     pageChange?: (newPage: number) => void;
     selectedDate?: Dayjs | null;
-    setSelectedDate?: React$1.Dispatch<React$1.SetStateAction<Dayjs | null>>;
+    setSelectedDate?: React.Dispatch<React.SetStateAction<Dayjs | null>>;
     handleDateChange?: (newDate: Dayjs | null) => void;
     pageSizeOptions?: number[];
-    loader?: React$1.ReactNode;
+    loader?: React.ReactNode;
     rowCount?: number;
     pageSize?: number;
     currentPage?: number;
@@ -291,7 +291,7 @@ interface PheonixTableProps {
     onSearchQueryChange?: (newQuery: string) => void;
     searchQuery: string;
 }
-declare const PheonixTable: React$1.FC<PheonixTableProps>;
+declare const PheonixTable: React.FC<PheonixTableProps>;
 
 interface PheonixSideBarProps {
     icon: React__default.ReactNode;
