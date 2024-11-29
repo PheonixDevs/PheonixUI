@@ -24,7 +24,6 @@ interface PheonixSideBarProps {
   listTextSx?: SxProps<Theme>;
 }
 
-// Styled Custom Tooltip
 const CustomTooltip = styled(({ className, ...props }: any) => (
   <Tooltip {...props} classes={{ popper: className }} />
 ))(() => ({
