@@ -26,21 +26,9 @@ For yarn:
 yarn add pheonixui
 ```
 
-## Bug Fix
-
-To resolve the React multiple instance issue, use the following commands
-
-```bash
-rd /s /q node_modules\react
-rd /s /q node_modules\react-dom
-```
-
-This bug will be resolved in the upcoming release.
-
-
 ## Changelog 
 ```bash
-v1.0.0
+v1.0.1
 
 - PheonixAccordion
 - PheonixAutocomplete
