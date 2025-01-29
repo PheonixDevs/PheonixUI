@@ -7,10 +7,11 @@ import {
   Button,
   SxProps,
   Box,
+  CardProps
 } from "@mui/material";
 import themestyle from "../theme";
 
-interface PheonixCardProps {
+interface PheonixCardProps extends CardProps {
   title?: string;
   description?: string;
   imageSrc?: string;

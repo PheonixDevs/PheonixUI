@@ -5,10 +5,11 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
+  DialogProps,
   Typography,
 } from "@mui/material";
 
-interface DialogModalProps {
+interface DialogModalProps extends DialogProps {
   open: boolean;
   onClose: () => void;
   onConfirm: () => void;
