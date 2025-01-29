@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { SxProps, Theme } from "@mui/material/styles";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+import Tabs, { TabsProps } from "@mui/material/Tabs";
+import Tab, { TabProps } from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 
-interface TabDataItem {
+interface TabDataItem  {
   label: string;
   content?: React.ReactNode;
   sx?: SxProps<Theme>;
 }
 
-interface CustomTabsProps {
+interface CustomTabsProps extends Omit<TabsProps, "onChange"> {
   tabData: TabDataItem[];
   onChange?: (event: React.SyntheticEvent, newValue: number) => void;
   tabsProps?: {

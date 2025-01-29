@@ -61,19 +61,17 @@ const PheonixLogin: React.FC<LoginProps> = ({
                   label="Password"
                   variant="outlined"
                   {...passwordTextField}
-                  endAdornment={
-                    <InputAdornment
-                      position="end"
-                      style={{
-                        cursor: "pointer",
-                        marginTop: "0px",
-                        color: "black",
-                      }}
-                      onClick={handleTogglePassword}
-                    >
-                      {showPassword ? <Visibility /> : <VisibilityOff />}
-                    </InputAdornment>
-                  }
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment
+                        position="end"
+                        style={{ cursor: "pointer", color: "black" }}
+                        onClick={handleTogglePassword}
+                      >
+                        {showPassword ? <Visibility /> : <VisibilityOff />}
+                      </InputAdornment>
+                    ),
+                  }}
                 />
                 <PheonixButton {...loginButton} />
               </Box>

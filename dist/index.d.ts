@@ -1,9 +1,10 @@
-import * as React$1 from 'react';
-import React__default, { ChangeEvent, FocusEvent, ReactNode, KeyboardEvent, CSSProperties } from 'react';
+import * as React from 'react';
+import React__default, { ReactNode, CSSProperties, ChangeEvent, FocusEvent } from 'react';
 import { ButtonProps } from '@mui/material/Button';
 import { SxProps, Theme as Theme$1 } from '@mui/material/styles';
-import { Theme, TextFieldProps, SxProps as SxProps$2 } from '@mui/material';
-import { SxProps as SxProps$1 } from '@mui/system';
+import { Theme, TextFieldProps, SxProps as SxProps$1 } from '@mui/material';
+import { SnackbarProps } from '@mui/material/Snackbar';
+import TextField from '@mui/material/TextField';
 import * as react_jsx_runtime from 'react/jsx-runtime';
 import { AutocompleteProps, AutocompleteRenderInputParams } from '@mui/material/Autocomplete';
 import { SkeletonProps } from '@mui/material/Skeleton';
@@ -20,56 +21,33 @@ interface PheonixButtonProps extends ButtonProps {
 }
 declare const PheonixButton: React__default.FC<PheonixButtonProps>;
 
-interface PheonixSnackBarProps {
+type PheonixSnackBarProps = Omit<SnackbarProps, 'anchorOrigin'> & {
     vertical: "top" | "bottom";
     horizontal: "left" | "center" | "right";
-    open: boolean;
-    onClose?: () => void;
-    message?: string;
     customAction?: React__default.ReactNode;
     severity?: "success" | "error";
     backgroundColor?: string;
     color?: string;
     width?: string;
     height?: string;
-    sx?: SxProps<Theme>;
-}
+};
 declare const PheonixSnackBar: React__default.FC<PheonixSnackBarProps>;
 
-interface PheonixTextFieldProps {
+interface PheonixTextFieldProps extends React__default.ComponentProps<typeof TextField> {
     id?: string;
     type: string;
     value?: string;
     name?: string;
-    placeholder?: string;
-    label?: string;
-    size?: "small" | "medium";
-    variant?: "standard" | "outlined" | "filled";
-    rememberMe?: boolean;
-    onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
-    onFocus?: (event: FocusEvent<HTMLInputElement>) => void;
-    onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
-    endAdornment?: ReactNode;
-    style?: React.CSSProperties;
-    required?: boolean;
-    className?: string;
-    error?: boolean;
-    helperText?: string;
-    disabled?: boolean;
-    sx?: SxProps$1;
-    multiline?: boolean;
-    rows?: number;
-    onKeyPress?: (event: KeyboardEvent<HTMLInputElement>) => void;
 }
-declare const PheonixTextField: React.FC<PheonixTextFieldProps>;
+declare const PheonixTextField: React__default.FC<PheonixTextFieldProps>;
 
-interface PheonixBoxProps {
+type PheonixBoxProps<C extends React__default.ElementType> = {
     children?: React__default.ReactNode;
-    component?: React__default.ElementType;
+    component?: C;
     style?: React__default.CSSProperties;
     sx?: SxProps<Theme$1>;
-}
-declare const PheonixBox: React__default.FC<PheonixBoxProps>;
+} & Omit<React__default.ComponentPropsWithoutRef<C>, "component" | "style" | "sx">;
+declare const PheonixBox: <C extends React__default.ElementType = "div">({ component, children, sx, style, ...props }: PheonixBoxProps<C>) => react_jsx_runtime.JSX.Element;
 
 interface PheonixPaperProps {
     children: ReactNode;
@@ -127,7 +105,7 @@ interface DialogModalProps {
 }
 declare const PheonixDialog: React__default.FC<DialogModalProps>;
 
-interface PhoenixTextareaProps extends Omit<TextFieldProps, 'multiline'> {
+interface PhoenixTextareaProps extends Omit<TextFieldProps, "multiline"> {
     id?: string;
     value?: string;
     name?: string;
@@ -144,7 +122,7 @@ interface PhoenixTextareaProps extends Omit<TextFieldProps, 'multiline'> {
     rows?: number;
     className?: string;
 }
-declare const PhoenixTextarea: React.FC<PhoenixTextareaProps>;
+declare const PhoenixTextarea: React__default.FC<PhoenixTextareaProps>;
 
 interface PheonixFooterProps {
     footerText?: string;
@@ -237,7 +215,7 @@ interface PheonixCardProps {
     onPrimaryButtonClick?: () => void;
     onSecondaryButtonClick?: () => void;
     Styles?: React__default.CSSProperties;
-    sx?: SxProps$2;
+    sx?: SxProps$1;
     children?: React__default.ReactNode;
     cardHeight?: string | number;
     cardWidth?: string | number;
@@ -263,7 +241,7 @@ interface PheonixTableProps {
     width?: string;
     sx?: Record<string, any>;
     components?: {
-        Toolbar?: React$1.ElementType<ToolbarProps>;
+        Toolbar?: React.ElementType<ToolbarProps>;
     };
     paginationModel?: {
         pageSize: number;
@@ -276,10 +254,10 @@ interface PheonixTableProps {
     pageSizeChange?: (newPageSize: number) => void;
     pageChange?: (newPage: number) => void;
     selectedDate?: Dayjs | null;
-    setSelectedDate?: React$1.Dispatch<React$1.SetStateAction<Dayjs | null>>;
+    setSelectedDate?: React.Dispatch<React.SetStateAction<Dayjs | null>>;
     handleDateChange?: (newDate: Dayjs | null) => void;
     pageSizeOptions?: number[];
-    loader?: React$1.ReactNode;
+    loader?: React.ReactNode;
     rowCount?: number;
     pageSize?: number;
     currentPage?: number;
@@ -291,7 +269,7 @@ interface PheonixTableProps {
     onSearchQueryChange?: (newQuery: string) => void;
     searchQuery: string;
 }
-declare const PheonixTable: React$1.FC<PheonixTableProps>;
+declare const PheonixTable: React.FC<PheonixTableProps>;
 
 interface PheonixSideBarProps {
     icon: React__default.ReactNode;
@@ -299,10 +277,10 @@ interface PheonixSideBarProps {
     to: string;
     selected?: boolean;
     onSelect: (to: string) => void;
-    boxSx?: SxProps$2<Theme>;
-    listItemSx?: SxProps$2<Theme>;
-    listIconSx?: SxProps$2<Theme>;
-    listTextSx?: SxProps$2<Theme>;
+    boxSx?: SxProps$1<Theme>;
+    listItemSx?: SxProps$1<Theme>;
+    listIconSx?: SxProps$1<Theme>;
+    listTextSx?: SxProps$1<Theme>;
 }
 declare const PheonixSideBar: React__default.FC<PheonixSideBarProps>;
 
