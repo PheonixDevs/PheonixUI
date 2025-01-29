@@ -1,6 +1,7 @@
 import * as React from "react";
 import {
   DataGrid,
+  DataGridProps, 
   GridToolbarColumnsButton,
   GridToolbarFilterButton,
   GridToolbarDensitySelector,
@@ -23,7 +24,7 @@ interface ToolbarProps {
   onFilterChange?: (value: string) => void;
 }
 
-interface PheonixTableProps {
+interface PheonixTableProps extends Partial<DataGridProps> {
   columns: GridColDef[];
   rows: any[];
   height?: number;

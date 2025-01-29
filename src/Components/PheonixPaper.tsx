@@ -1,7 +1,7 @@
 import React, { ReactNode, CSSProperties } from 'react';
-import Paper from '@mui/material/Paper';
+import Paper, { PaperProps } from "@mui/material/Paper";
 
-export interface PheonixPaperProps {
+export interface PheonixPaperProps extends PaperProps {
   children: ReactNode;
   elevation?: number;
   padding?: number | string;
